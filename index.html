@@ -1,63 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Biblioteca de estudos Full Stack: HTML, CSS, JavaScript, React, Node, bancos de dados, APIs, testes e deploy.">
-  <title>Biblioteca Full Stack — Guia de Estudos</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biblioteca do Curso</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="#" aria-label="Biblioteca Full Stack">
-      <span class="brand-mark">FS</span><span><strong>Biblioteca</strong><small>FULL STACK</small></span>
-    </a>
-    <div class="side-label">SUA JORNADA</div>
-    <nav id="sideNav" aria-label="Livros"></nav>
-    <div class="sidebar-bottom"><span class="status-dot"></span> Seu progresso fica salvo neste navegador.</div>
-  </aside>
-
-  <main class="main">
-    <header class="topbar">
-      <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menu">☰</button>
-      <div class="breadcrumb">Biblioteca <span>/</span> <strong id="crumb">Visão geral</strong></div>
-      <button class="theme-toggle" id="themeToggle" title="Alternar tema">☼ <span>Tema</span></button>
-    </header>
-
-    <section class="hero" id="overview">
-      <div class="hero-copy">
-        <span class="eyebrow">GUIA DE APRENDIZAGEM • 12 LIVROS</span>
-        <h1>Do primeiro <span>HTML</span><br>ao projeto Full Stack.</h1>
-        <p>Uma biblioteca prática para estudar cada etapa da trilha: conceitos em linguagem simples, exemplos de código, exercícios e projetos para construir seu portfólio.</p>
-        <button class="primary-btn" id="continueBtn">Continuar estudando <span>→</span></button>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="code-card"><span class="dots">● ● ●</span><pre><span class="pink">const</span> <span class="blue">developer</span> = {
-  learn: <span class="green">"every day"</span>,
-  build: <span class="green">"real projects"</span>,
-  level: <span class="yellow">"Full Stack"</span>
-};</pre><div class="code-footer"><span>✓ aprendizado contínuo</span><span>JS</span></div></div>
-      </div>
-    </section>
-
-    <section class="progress-panel">
-      <div><div class="section-kicker">SEU PROGRESSO</div><h2>Pequenos passos, grandes projetos.</h2><p id="progressText">0 de 12 livros concluídos</p></div>
-      <div class="progress-right"><strong id="progressPercent">0%</strong><div class="progress-track"><span id="progressBar"></span></div></div>
-    </section>
-
-    <section class="library-section">
-      <div class="section-heading"><div><div class="section-kicker">A TRILHA COMPLETA</div><h2>Escolha seu próximo livro</h2></div>
-      <div class="filters"><input type="search" id="searchInput" placeholder="Buscar assunto..." aria-label="Buscar assunto"><select id="filterSelect" aria-label="Filtrar livros"><option value="all">Todos os livros</option><option value="todo">Não iniciados</option><option value="done">Concluídos</option></select></div></div>
-      <div class="book-grid" id="bookGrid"></div>
-    </section>
-
-    <section class="reader hidden" id="reader" aria-live="polite">
-      <button class="back-btn" id="backBtn">← Voltar à biblioteca</button>
-      <div id="readerContent"></div>
-    </section>
-    <footer>Biblioteca Full Stack <span>•</span> Feita para estudar, praticar e evoluir.</footer>
-  </main>
-  <script src="script.js"></script>
+<header>
+<h1>Biblioteca do Curso</h1>
+<p>Cada semana do roadmap é um livro. Abra, leia os capítulos e marque como lidos para acompanhar seu avanço.</p>
+<div class="bar" aria-hidden="true"><i id="pb"></i></div>
+<p id="pt" style="margin-top:8px;font-size:14px"></p>
+</header>
+<main class="shelf" id="shelf"></main>
+<dialog id="dlg" aria-label="Livro"><button class="x" id="cl">Fechar</button><div class="rd"><aside class="side" id="side"></aside><section class="page" id="pg"></section></div></dialog>
+<dialog id="cod" aria-label="Código ampliado"><button class="x" id="cc">Fechar</button><pre id="cp"></pre></dialog>
+<script src="app.js" defer></script>
 </body>
 </html>
